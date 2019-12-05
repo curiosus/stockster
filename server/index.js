@@ -1,5 +1,6 @@
 const express = require('express');
 const http = require('https');
+const cors = require('cors');
 const config = require('./config.js');
 
 const server = express();
@@ -19,6 +20,8 @@ const options = (sym) => {
 		}
 	};
 }
+
+server.use(cors({origin: 'http://localhost:3000'}));
 
 server.get('/', (req, res) => {
 	res.send('Home Page');

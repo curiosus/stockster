@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import DataTable from './DataTable';
 
 
 const StockList = (props) => (
@@ -85,6 +86,7 @@ class Portfolio extends Component {
 			  	<div>
 						<StockList stocks={this.state.stocks} />
 			  	</div>
+					<DataTable />
 			</>
 		);
 	}
